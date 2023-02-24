@@ -1,3 +1,4 @@
 import checkIfEmail from "./checkIfEmail.middleware";
+import checkBodyRequest from "./checkBodyReq.middleware";
 
-export { checkIfEmail };
+export { checkIfEmail, checkBodyRequest };

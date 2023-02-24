@@ -1,6 +1,7 @@
 import format from "pg-format";
 import { client } from "../database";
 import { iUserRequest, UserResult, UserWithNoPassword } from "../interfaces";
+import { returnUserSchema } from "../schemas/users.schema";
 
 const createUsersService = async (
   data: iUserRequest
@@ -18,7 +19,11 @@ const createUsersService = async (
 
   const queryResult: UserResult = await client.query(queryTemplate);
 
-  return queryResult.rows[0];
+  const createUser: UserWithNoPassword = returnUserSchema.parse(
+    queryResult.rows[0]
+  );
+
+  return createUser;
 };
 
 export default createUsersService;
