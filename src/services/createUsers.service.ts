@@ -1,9 +1,9 @@
 import format from "pg-format";
 import { client } from "../database";
 import { iUserRequest, UserResult, UserWithNoPassword } from "../interfaces";
-import { returnUserSchema } from "../schemas/users.schema";
+import { returnUserSchema } from "../schemas/users.schemas";
 
-const createUsersService = async (
+const createUserService = async (
   data: iUserRequest
 ): Promise<UserWithNoPassword> => {
   const queryTemplate: string = format(
@@ -26,4 +26,4 @@ const createUsersService = async (
   return createUser;
 };
 
-export default createUsersService;
+export default createUserService;

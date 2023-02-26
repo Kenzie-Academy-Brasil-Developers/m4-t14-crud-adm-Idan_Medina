@@ -1,8 +1,21 @@
 import {
   iUserRequest,
   iUserResponse,
+  iUserUpdate,
   UserWithNoPassword,
+  ListUser,
   UserResult,
-} from "./users.interface";
+  UserResultPswd,
+} from "./users.interfaces";
+import { iLoginRequest } from "./login.interfaces";
 
-export { iUserRequest, iUserResponse, UserWithNoPassword, UserResult };
+export {
+  iUserRequest,
+  iUserResponse,
+  iUserUpdate,
+  UserWithNoPassword,
+  ListUser,
+  UserResult,
+  UserResultPswd,
+  iLoginRequest,
+};
