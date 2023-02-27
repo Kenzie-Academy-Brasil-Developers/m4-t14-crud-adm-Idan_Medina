@@ -16,6 +16,8 @@ type UserWithNoPassword = z.infer<typeof returnUserSchema>;
 type ListUser = z.infer<typeof readUsersSchema>;
 type UserResult = QueryResult<UserWithNoPassword>;
 type UserResultPswd = QueryResult<iUserResponse>;
+type UserResultUpdate = QueryResult<iUserUpdate>;
+type UserResultPatch = QueryResult<typeof updateUserSchema>;
 
 export {
   iUserRequest,
@@ -25,4 +27,6 @@ export {
   ListUser,
   UserResult,
   UserResultPswd,
+  UserResultUpdate,
+  UserResultPatch,
 };

@@ -25,8 +25,8 @@ const createUserSchema = userSchema
 const returnUserSchema = userSchema.omit({ password: true });
 
 const updateUserSchema = userSchema
-  .partial()
-  .omit({ id: true, admin: true, active: true });
+  .omit({ id: true, admin: true, active: true })
+  .partial();
 
 const readUsersSchema = z.array(returnUserSchema);
 

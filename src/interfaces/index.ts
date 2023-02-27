@@ -6,6 +6,8 @@ import {
   ListUser,
   UserResult,
   UserResultPswd,
+  UserResultUpdate,
+  UserResultPatch,
 } from "./users.interfaces";
 import { iLoginRequest } from "./login.interfaces";
 
@@ -17,5 +19,7 @@ export {
   ListUser,
   UserResult,
   UserResultPswd,
+  UserResultUpdate,
+  UserResultPatch,
   iLoginRequest,
 };
